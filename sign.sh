@@ -22,7 +22,7 @@ chmod 755 *
 if ls ./.lego/certificates | grep "$domain"
     then
     echo '证书签发成功'
-    mkdir /root/.cert
+    mkdir /opt/ssl
     cp ./.lego/certificates/$domain.crt /opt/ssl/server.crt
     cp ./.lego/certificates/$domain.key /opt/ssl/server.key
 else
